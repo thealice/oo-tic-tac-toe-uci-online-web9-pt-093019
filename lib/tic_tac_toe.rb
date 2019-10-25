@@ -46,7 +46,7 @@ class TicTacToe
       ask_for_input
     end
   end
-  def turn_count
+  def turn_count(board)
     # binding.pry
     @board.count - @board.select(" ").count #{|token| token == "X" || token == "O"}
   end
