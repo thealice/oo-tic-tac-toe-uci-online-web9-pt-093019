@@ -76,7 +76,9 @@ class TicTacToe
     won? || full?
   end
   def winner?
-    if !draw? WIN_COMBINATIONS.each { |combo| @board[combo[0]] }
+    if !draw?
+      WIN_COMBINATIONS.each { |combo| @board[combo[0]] }
+    end
   end
 
 end
