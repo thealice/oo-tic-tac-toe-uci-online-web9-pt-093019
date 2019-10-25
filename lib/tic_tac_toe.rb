@@ -40,7 +40,6 @@ class TicTacToe
     ask_for_input = puts "Please enter 1-9:"
     input = gets
     index = input_to_index(input)
-        binding.pry
     if valid_move?(index)
       move(index, token) && @board.display_board
     else
