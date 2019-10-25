@@ -67,7 +67,7 @@ class TicTacToe
     end
   end
   def full?
-
+    @board.detect(" ")
   end
   def draw?
   end
