@@ -23,7 +23,6 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   def input_to_index(input)
-    #@input = input
     index = input.to_i - 1
   end
   def move(index, token = "X")
@@ -60,7 +59,8 @@ class TicTacToe
     end
   end
   def won?
-    @board.detect(WIN_COMBINATIONS) 
+    # @board.detect(WIN_COMBINATIONS)
+    WIN_COMBINATIONS.each { |combo| @board.detect(combo) }
   end
   def full?
 
