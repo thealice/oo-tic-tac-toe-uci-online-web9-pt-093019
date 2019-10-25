@@ -53,23 +53,23 @@ class TicTacToe
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
-  def won?
-    # iterate through arrays of winning combinations and
-    # see if there are any instances on @board where there is
-    # the same character in all three elements of a winning combos array
-    WIN_COMBINATIONS.detect do |combo|
-      @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]] && @board[combo[0]] != " "
-    end
-  end
-  def full?
-    @board.none?{ |position| position == " "}
-  end
-  def draw?
-    !won? && full?
-  end
-  def over?
-    won? || full?
-  end
+  # def won?
+  #   # iterate through arrays of winning combinations and
+  #   # see if there are any instances on @board where there is
+  #   # the same character in all three elements of a winning combos array
+  #   WIN_COMBINATIONS.detect do |combo|
+  #     @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]] && @board[combo[0]] != " "
+  #   end
+  # end
+  # def full?
+  #   @board.none?{ |position| position == " "}
+  # end
+  # def draw?
+  #   !won? && full?
+  # end
+  # def over?
+  #   won? || full?
+  # end
   def winner?
     # if won?
     #   current_player
