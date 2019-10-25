@@ -26,8 +26,8 @@ class TicTacToe
     #@input = input
     index = input.to_i - 1
   end
-  def move(input, token = "X")
-    @board[input] = token
+  def move(index, token = "X")
+    @board[index] = token
   end
   def position_taken?(index)
     # @board[index] !== " "
@@ -47,8 +47,7 @@ class TicTacToe
     end
   end
   def turn_count
-    # binding.pry
-    @board.count{|token| token == "X" || token == "O"}#- board.select(" ").count
+    @board.count{|token| token == "X" || token == "O"}#- @board.select(" ").count
   end
 
   def current_player
