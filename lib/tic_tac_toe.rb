@@ -60,7 +60,7 @@ class TicTacToe
     end
   end
   def won?
-    if @board.dectect?(WIN_COMBINATIONS) 
+    @board.detect?(WIN_COMBINATIONS) 
   end
   def full?
 
