@@ -1,3 +1,4 @@
+require 'pry'
 class TicTacToe
   WIN_COMBINATIONS = [
     [0,1,2], # Top row
@@ -22,25 +23,32 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   def input_to_index(input)
-    @input = input
-    @index = input.to_i - 1
+    #@input = input
+    index = input.to_i - 1
   end
-  def move(index, token = "X")
-    @board[index] = token
+  def move(input, token = "X")
+    @board[input] = token
   end
-  def position_taken?(index = @index)
-    @board[index] != " "
-  end
-  def valid_move?
-    if position_taken &&
-
-  end
+  # def position_taken?(index)
+  #   @board[index] == " " : false ? true
+  # end
+  # def valid_move?(position)
+  #   position_taken?(position) && position.between?(0,8)
+  # end
   def turn
-
+    ask_for_input = puts "Please enter 1-9:"
+    input = gets
+    index = input.input_to_index
+    if valid_move?(index)
+      move(index, token) && @board.display_board
+    else
+      ask_for_input
+    end
   end
-  def turn_count
+    # def turn_count
+    #   # binding.pry
+    #   @board.count - @board.select(" ").count #{|token| token == "X" || token == "O"}
 
-  end
   def current_player
 
   end
