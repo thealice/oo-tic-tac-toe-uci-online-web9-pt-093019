@@ -54,9 +54,10 @@ class TicTacToe
     if turn_count % 2
       puts "O"
     else
-      binding.pry
+
       puts "X"
     end
+          binding.pry
   end
   def won?
 
