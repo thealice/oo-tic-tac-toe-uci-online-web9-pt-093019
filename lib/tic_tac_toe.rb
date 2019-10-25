@@ -60,7 +60,10 @@ class TicTacToe
   end
   def won?
     # @board.detect(WIN_COMBINATIONS)
-    WIN_COMBINATIONS.each { |combo| @board.detect(combo) }
+    @board.each_with_index do |combo, index| 
+      @board.detect {combo}
+      binding.pry
+    end
   end
   def full?
 
