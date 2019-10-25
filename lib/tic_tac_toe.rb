@@ -76,7 +76,9 @@ class TicTacToe
     won? || full?
   end
   def winner?
-
+    WIN_COMBINATIONS.detect do |combo|
+      @board[combo[0]]
+    end
   end
 
 
