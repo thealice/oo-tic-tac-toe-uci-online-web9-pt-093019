@@ -42,7 +42,7 @@ class TicTacToe
     index = input_to_index(input)
     if valid_move?(index)
       token = turn_count
-      move(index, token) && @board.display_board
+      move(index, token) && display_board
     else
       ask_for_input
     end
