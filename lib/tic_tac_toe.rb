@@ -41,6 +41,7 @@ class TicTacToe
     input = gets
     index = input_to_index(input)
     if valid_move?(index)
+      token = turn_count
       move(index, token) && @board.display_board
       binding.pry
     else
