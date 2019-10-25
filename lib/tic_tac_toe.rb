@@ -46,13 +46,13 @@ class TicTacToe
       turn
     end
   end
-  # def turn_count
-  #   @board.count{|token| token == "X" || token == "O"}#- @board.select(" ").count
-  # end
-  # 
-  # def current_player
-  #   turn_count % 2 == 0 ? "X" : "O"
-  # end
+  def turn_count
+    @board.count{|token| token == "X" || token == "O"}#- @board.select(" ").count
+  end
+
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
   def won?
     # iterate through arrays of winning combinations and
     # see if there are any instances on @board where there is
