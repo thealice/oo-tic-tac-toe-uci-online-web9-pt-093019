@@ -72,7 +72,7 @@ class TicTacToe
   end
   def winner
     won?
-    @board[combo[0]]
+    # puts @board[combo[0]]
         binding.pry
       end
 
