@@ -62,8 +62,11 @@ class TicTacToe
     #iterate through @board and compare existing positions of X
     #to WIN_COMBINATIONS[0..8]
     #do the same for O?
-    @board.each_with_index do |token, index|
-      @board[index]
+    WIN_COMBINATIONS.detect do |combo|
+      @board[combo[0]] == @board[combo[1]] == @board[combo[2]]
+    end
+
+      
       binding.pry
     end
   end
