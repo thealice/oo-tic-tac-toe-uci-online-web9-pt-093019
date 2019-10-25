@@ -75,6 +75,7 @@ class TicTacToe
       WIN_COMBINATIONS.detect do |combo|
         @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]] && @board[combo[0]] != " "
         winner = @board[combo[0]]
+        binding.pry
       end
 
     end
