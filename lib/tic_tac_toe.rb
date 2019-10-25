@@ -71,9 +71,9 @@ class TicTacToe
     won? || full?
   end
   def winner?
-    if won?
-      current_player
-    end
+    # if won?
+    #   current_player
+    # end
   end
 
 end
