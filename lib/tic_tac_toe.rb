@@ -52,9 +52,9 @@ class TicTacToe
 
   def current_player
     if turn_count % 2 == 0
-      puts "O"
+       "O"
     else
-      puts "X"
+       "X"
     end
   end
   def won?
