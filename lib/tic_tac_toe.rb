@@ -67,7 +67,7 @@ class TicTacToe
     end
   end
   def full?
-    @board.detect(" ")
+    @board.detect{ |position| position !== " "}
   end
   def draw?
   end
