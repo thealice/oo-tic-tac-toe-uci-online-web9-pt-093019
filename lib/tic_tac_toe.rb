@@ -29,12 +29,13 @@ class TicTacToe
   def move(input, token = "X")
     @board[input] = token
   end
-  # def position_taken?(index)
-  #   @board[index] == " " : false ? true
-  # end
-  # def valid_move?(position)
-  #   position_taken?(position) && position.between?(0,8)
-  # end
+  def position_taken?(board, index)
+    board[index] !== " "
+    # board[index] == "X" || board[index] == "O"
+  end
+  def valid_move?(position)
+    position.between?(0,8) && !position_taken?(board, index)
+  end
   def turn
     ask_for_input = puts "Please enter 1-9:"
     input = gets
