@@ -51,7 +51,7 @@ class TicTacToe
   end
 
   def current_player
-    if turn_count % 2
+    if turn_count % 2 == 0
       puts "O"
     else
 
