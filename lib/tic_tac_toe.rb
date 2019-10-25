@@ -43,7 +43,6 @@ class TicTacToe
     if valid_move?(index)
       token = turn_count
       move(index, token) && @board.display_board
-      binding.pry
     else
       ask_for_input
     end
