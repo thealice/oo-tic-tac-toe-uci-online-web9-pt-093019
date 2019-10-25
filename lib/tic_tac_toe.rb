@@ -70,7 +70,7 @@ class TicTacToe
   def over?
     won? || full?
   end
-  def winner?
+  def winner
     # if won?
     #   current_player
     # end
