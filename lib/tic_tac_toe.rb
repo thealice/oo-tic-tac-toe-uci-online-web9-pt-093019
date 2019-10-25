@@ -74,7 +74,4 @@ class TicTacToe
     won?
   end
 
-    end
-  end
-
 end
