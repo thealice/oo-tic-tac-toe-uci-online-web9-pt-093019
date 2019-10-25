@@ -51,18 +51,19 @@ class TicTacToe
   end
 
   def current_player
-    # turn_count % 2 == 0 : "X" ? "O"
-    if turn_count % 2 == 0
-       "X"
-    else
-       "O"
-    end
+    turn_count % 2 == 0 ? "X" : "O"
+    # if turn_count % 2 == 0
+    #    "X"
+    # else
+    #    "O"
+    # end
   end
   def won?
     #iterate through @board and compare existing positions of X
     #to WIN_COMBINATIONS[0..8]
     #do the same for O?
     @board.each_with_index do |token, index|
+      @board[index]
       binding.pry
     end
   end
