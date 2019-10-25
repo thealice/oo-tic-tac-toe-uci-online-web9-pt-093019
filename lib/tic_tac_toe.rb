@@ -59,9 +59,10 @@ class TicTacToe
     end
   end
   def won?
-    # @board.detect(WIN_COMBINATIONS)
-    @board.each_with_index do |combo, index| 
-      @board.detect {combo}
+    #iterate through @board and compare existing positions of X
+    #to WIN_COMBINATIONS[0..8]
+    #do the same for O?
+    @board.each_with_index do |token, index|
       binding.pry
     end
   end
