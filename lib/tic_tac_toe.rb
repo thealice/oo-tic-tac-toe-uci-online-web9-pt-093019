@@ -42,6 +42,7 @@ class TicTacToe
     index = input_to_index(input)
     if valid_move?(index)
       move(index, token) && @board.display_board
+      binding.pry
     else
       ask_for_input
     end
