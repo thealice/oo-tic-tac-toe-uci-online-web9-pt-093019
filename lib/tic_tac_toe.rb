@@ -75,5 +75,5 @@ class TicTacToe
     #   current_player
     # end
   end
-end
+
 end
